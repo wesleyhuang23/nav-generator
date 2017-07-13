@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Guideboat Nav Generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Nav Name</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <form>
+                        <h2>Title</h2>
+                        <input type="text" placeholder="name of the nav...">
+                        <br>
+                        <br>
+                        <button type="button" class="btn-success">Generate HTML</button>
+                    </form>
+                </div>
+                <div class="col-lg-8">
+                    <div class="editable"></div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        <h1>Nav Items</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <form>
+                        <h2>Title</h2>
+                        <input type="text" placeholder="name of the nav...">
+                        <h2>Catagory Id</h2>
+                        <input type="text" placeholder="id_path exp. 'catagory/999'">
+                        <br>
+                        <br>
+                        <button type="button" class="btn-success">Generate HTML</button>
+                    </form>
+                </div>
+                <div class="col-lg-8">
+                    <div class="editable"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
