@@ -26,7 +26,7 @@ $(function(){
         } else if (form.className === 'desktop-item'){
             var name = form.children[1].value;
             var id = form.children[3].value;
-            $('.desktop-item-output').text(`<li>{{widget type="catalog/category_widget_link" anchor_text="`+ name +`" title="`+ name +`" template="catalog/category/widget/link/link_block.phtml" id_path="`+ id +`"}}</li>`);
+            $('.desktop-item-output').text(`<li>{{widget type="catalog/category_widget_link" anchor_text="`+ name +`" title="`+ name +`" template="catalog/category/widget/link/link_block.phtml" id_path="category/`+ id +`"}}</li>`);
         }
     })
 })
