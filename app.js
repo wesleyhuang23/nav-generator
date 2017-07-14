@@ -5,22 +5,28 @@ $(function(){
 
     $('button').on('click', function(e){
         console.log(e.target.parentElement.children[1].value);
-        var title = e.target.parentElement.children[1].value;
-        $('.desktop-title').text(`
-            <li>
-                <a style="text-decoration: none; cursor: default;" title="`+ title + `"> `+ title +`</a>
-                <div class="dropdown">
-                    <ul>
-                        <li>
-                            <ul class="dropdown2">
+        var form = e.target.parentElement
+        if(form.className === 'desktop-title'){
+            var title = e.target.parentElement.children[1].value;
+            $('.desktop-title-output').text(`
+                <li>
+                    <a style="text-decoration: none; cursor: default;" title="`+ title + `"> `+ title +`</a>
+                    <div class="dropdown">
+                        <ul>
+                            <li>
+                                <ul class="dropdown2">
 
-                            <!--PUT NAV ITMES HERE -->
+                                <!--PUT NAV ITMES HERE -->
 
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        `)
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>`)
+        } else if (form.className === 'desktop-item'){
+            var name = form.children[1].value;
+            var id = form.children[3].value;
+            $('.desktop-item-output').text(`<li>{{widget type="catalog/category_widget_link" anchor_text="`+ name +`" title="`+ name +`" template="catalog/category/widget/link/link_block.phtml" id_path="`+ id +`"}}</li>`);
+        }
     })
 })
