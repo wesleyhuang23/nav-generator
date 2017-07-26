@@ -12,3 +12,8 @@ textarea{
 input{
     width: 100%;
 }
+
+a .btn{
+    background-color: cyan;
+    padding: 10px;
+}

@@ -15,14 +15,15 @@ $(function(){
                         <ul>
                             <li>
                                 <ul class="dropdown2">
+             
+                                    <!--PUT NAV ITMES HERE -->
 
-                                <!--PUT NAV ITMES HERE -->
-
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </li>`)
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                `);
         } else if (form.className === 'desktop-item'){
             var name = form.children[1].value;
             var id = form.children[3].value;
@@ -44,5 +45,13 @@ $(function(){
                 <li><span class="widget widget-category-link"><a href="http://www.guideboat.com/`+ link +`" title="`+ name +`"><span>` + name + `</span></a></span></li>
             `)
         }
+    })
+
+    $('a').on('click', function(){
+        var desktopItem = $('.desktop-item-output')[0];
+        var output = $('.desktop-title-output')[0];
+        console.log(output.defaultValue);
+        $('.desktop-title-output').text(output.defaultValue);
+        $('.desktop-title-output').text(desktopItem.defaultValue);
     })
 })
